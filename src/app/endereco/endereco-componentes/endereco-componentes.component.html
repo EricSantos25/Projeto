@@ -1,0 +1,30 @@
+<p>
+  endereco-componentes works!
+</p>
+<table>
+  <caption>Endereco</caption>
+  <tr>
+      <th scope="col">ID de Endereco:</th>
+      <th scope="col">ID de Cadastro:</th>
+      <th scope="col">CEP:</th>
+      <th scope="col">Logradouro:</th>
+      <th scope="col">Número:</th>
+      <th scope="col">Complemento:</th>
+      <th scope="col">Bairro:</th>
+      <th scope="col">Municipio:</th>
+      <th scope="col">UF:</th>
+      <th scope="col">Tipo:</th>
+  </tr>
+  <tr *ngFor="let reg of registros">
+    <td>{{reg.idEnd}}</td>
+    <td>{{reg.idCad}}</td>
+    <td>{{reg.cep}}</td>
+    <td>{{reg.logradouro}}</td>
+    <td>{{reg.numero}}</td>
+    <td>{{reg.complemento}}</td>
+    <td>{{reg.bairro}}</td>
+    <td>{{reg.municipio}}</td>
+    <td>{{reg.uf}}</td>
+    <td>{{reg.tipo}}</td>
+  </tr>
+</table>

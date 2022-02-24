@@ -2,22 +2,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CadastroComponent } from './Cadastro Modules/cadastro/cadastro.component';
-import { CadastroService } from './cadastro.service';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { EnderecoComponentesComponent } from './endereco/endereco-componentes/endereco-componentes.component';
+import { EnderecoService } from './endereco/endereco.service';
+import { AdminComponentesComponent } from './admin/admin-componentes/admin-componentes.component';
+import { DocumentoComponentesComponent } from './documento/documento-componentes/documento-componentes.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroComponent
+    EnderecoComponentesComponent,
+    AdminComponentesComponent,
+    DocumentoComponentesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
   ],
-  providers: [CadastroService,],
+  providers: [EnderecoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
