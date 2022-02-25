@@ -3,7 +3,7 @@
   "version": "6.0.7",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.config.js",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "bootstrap": "^5.1.3",
     "core-js": "^2.5.4",
     "cors": "^2.8.5",
     "rxjs": "^6.0.0",

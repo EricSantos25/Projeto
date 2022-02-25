@@ -2,22 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CadastroComponent } from './Cadastro Modules/cadastro/cadastro.component';
-import { CadastroService } from './cadastro.service';
+
+import { CadastroService } from './services/cadastro.service';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CadastroComponent } from './Cadastro Modules/cadastro/cadastro.component';
+import { SenhaComponent } from './senha/senha/senha.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroComponent
+    CadastroComponent,
+    SenhaComponent
+    
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    ReactiveFormsModule
   ],
-  providers: [CadastroService,],
+  providers: [CadastroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

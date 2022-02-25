@@ -1,9 +1,11 @@
-export interface cadastro{
-    cpfCnpj: number;
+
+export class cadastro{
+   idCad?: number
+    cpfCnpj: number 
     senha: string
     nome: string
-    sobrenome: string
+    sobreNome: string
     razaoSocial: string
     dtNascFund: Date
-    dtCriacao: Date;
+    dtCriacao: Date
 }
