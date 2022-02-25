@@ -13,11 +13,11 @@ export class DocumentoComponentesComponent implements OnInit {
   constructor(private documentoService: DocumentoService) { }
 
   ngOnInit() {
-    this.lista();
+    this.listar();
   }
 
-  lista() {
-    this.documentoService.lista().subscribe(dados => this.registros = dados)
+  listar() {
+    this.documentoService.listar().subscribe(dados => this.registros = dados)
   }
 
 }

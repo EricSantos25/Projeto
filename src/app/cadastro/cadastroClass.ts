@@ -1,7 +1,4 @@
-import { Endereco } from "../endereco/enderecoClass"
-import { Documento } from "../documento/documentoClass"
- 
-export class Admin {
+export class Cadastro {
     
     constructor(
         _idCad: number,
@@ -11,7 +8,5 @@ export class Admin {
         _razaoSocial: string,
         _dtNascFund: Date,
         _dtCriacao: Date,
-        _documento: Array<Documento>,
-        _endereco: Array<Endereco>
     ) {  }
 }

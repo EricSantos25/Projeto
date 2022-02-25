@@ -1,5 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
-    display: flex;
-    justify-content: center;
-    background-color: red;
+    margin: 0;
+}
+
+h1{
+    font-weight: 100;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(105, 105, 105);
 }

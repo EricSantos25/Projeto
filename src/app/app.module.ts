@@ -1,11 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { EnderecoComponentesComponent } from './endereco/endereco-componentes/endereco-componentes.component';
 import { EnderecoService } from './endereco/endereco.service';
 import { AdminComponentesComponent } from './admin/admin-componentes/admin-componentes.component';
+import { CadastroComponentesComponent } from './cadastro/cadastro-form/cadastro-form.component';
+import { EnderecoComponentesComponent } from './endereco/endereco-componentes/endereco-componentes.component';
 import { DocumentoComponentesComponent } from './documento/documento-componentes/documento-componentes.component';
 
 
@@ -14,11 +16,13 @@ import { DocumentoComponentesComponent } from './documento/documento-componentes
     AppComponent,
     EnderecoComponentesComponent,
     AdminComponentesComponent,
-    DocumentoComponentesComponent
+    DocumentoComponentesComponent,
+    CadastroComponentesComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [EnderecoService],
   bootstrap: [AppComponent]

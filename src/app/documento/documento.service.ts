@@ -11,7 +11,7 @@ export class DocumentoService {
 
   constructor (private http: HttpClient) {}
 
-  lista(){
+  listar(){
       return this.http.get<any[]>(`${this.URL}`)
   }
 }
