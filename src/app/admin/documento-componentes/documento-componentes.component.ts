@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DocumentoService } from '../documento.service';
+import { DocumentoService } from '../../service/documento.service';
 
 @Component({
   selector: 'app-documento-componentes',

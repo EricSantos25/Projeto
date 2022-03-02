@@ -1,0 +1,190 @@
+<form class="needs-validation" novalidate [formGroup]="form">
+
+  <h1>Cadastro</h1>
+
+  <label for="nome">Nome:</label>
+  <input
+    type="text"
+    name="nome"
+    id="nome"
+    formControlName="nome"
+    placeholder="Nome"
+    [ngClass]="{ 'is-invalid': submitted && hasError('nome') }"
+  />
+
+  <label for="sobrenome">Sobrenome: </label>
+  <input
+    type="text"
+    name="sobrenome"
+    id="sobrenome"
+    formControlName="sobreNome"
+    placeholder="sobreNome"
+    [ngClass]="{ 'is-invalid': submitted && hasError('sobreNome') }"
+  />
+
+  <label for="senha">Senha:</label>
+  <input
+    type="password"
+    name="senha"
+    id="senha"
+    formControlName="senha"
+    placeholder="senha"
+    [ngClass]="{ 'is-invalid': submitted && hasError('senha') }"
+  />
+
+  <label for="cpfCnpj">CpfCnpj:</label>
+  <input
+    type="number"
+    name="cpfCnpj"
+    id="cpfCnpj"
+    formControlName="cpfCnpj"
+    placeholder="cpf/Cnpj"
+    [ngClass]="{ 'is-invalid': submitted && hasError('cpfCnpj') }"
+  />
+
+  <label for="razaoSocial">RazaoSocial:</label>
+  <input
+    type="text"
+    name="razaoSocial"
+    id="razaoSocial"
+    formControlName="razaoSocial"
+    placeholder="razão social"
+    [ngClass]="{ 'is-invalid': submitted && hasError('razaoSocial') }"
+  />
+
+  <label for="dtNascFnd">Data de Fundação: </label>
+  <input
+    type="date"
+    name="dtNascFund"
+    id="dtNascFund"
+    formControlName="dtNascFund"
+    placeholder="Data de Fundação"
+    [ngClass]="{ 'is-invalid': submitted && hasError('dtNascFund') }"
+  />
+
+  <h1>Documento</h1>
+  
+  <label for="">Tipo
+    <select name="select" [ngClass]="{ 'is-invalid': submitted && hasError('tipo') }">Tipo do Documento
+      <option name="tipo" id="tipo"  placeholder="tipo" value="valor1">CPF</option>
+      <option name="tipo" id="tipo"  placeholder="tipo" value="valor2" selected>RG</option>
+    </select>
+  </label>
+
+  <label for="numero">Número: </label>
+  <input
+    type="text"
+    name="numero"
+    id="numero"
+    formControlName="numero"
+    placeholder="numero"
+    [ngClass]="{ 'is-invalid': submitted && hasError('numero') }"
+  />
+
+  <label for="digito">Digito:</label>
+  <input
+    type="password"
+    name="digito"
+    id="digito"
+    formControlName="digito"
+    placeholder="digito"
+    [ngClass]="{ 'is-invalid': submitted && hasError('digito') }"
+  />
+
+  <label for="dtExp">Data de Expedição:</label>
+  <input
+    type="date"
+    name="dtExp"
+    id="dtExp"
+    formControlName="dtExp"
+    placeholder="cpf/Cnpj"
+    [ngClass]="{ 'is-invalid': submitted && hasError('date') }"
+  />
+
+  <label for="dtValidade">Data de Validade:</label>
+  <input
+    type="date"
+    name="dtValidade"
+    id="dtValidade"
+    formControlName="dtValidade"
+    placeholder="razão social"
+    [ngClass]="{ 'is-invalid': submitted && hasError('dtValidade') }"
+  />  
+
+  <h1>Endereco</h1>
+
+  <label for="cep">CEP:</label>
+  <input
+    type="number"
+    name="cep"
+    id="cep"
+    formControlName="cep"
+    placeholder="cep"
+    [ngClass]="{ 'is-invalid': submitted && hasError('cep') }"
+  />
+
+  <label for="logradouro">Logradouro:</label>
+  <input
+    type="text"
+    name="logradouro"
+    id="logradouro"
+    formControlName="logradouro"
+    placeholder="logradouro"
+    [ngClass]="{ 'is-invalid': submitted && hasError('logradouro') }"
+  />
+
+  <label for="numero">Número:</label>
+  <input
+    type="number"
+    name="numero"
+    id="numero"
+    formControlName="numero"
+    placeholder="Número"
+    [ngClass]="{ 'is-invalid': submitted && hasError('numero') }"
+  />
+
+  <label for="complemento">Complemento:</label>
+  <input
+    type="text"
+    name="complemento"
+    id="complemento"
+    formControlName="complemento"
+    placeholder="Complemento"
+    [ngClass]="{ 'is-invalid': submitted && hasError('complemento') }"
+  />
+
+  <label for="bairro">Bairro:</label>
+  <input
+    type="text"
+    name="bairro"
+    id="bairro"
+    formControlName="bairro"
+    placeholder="Bairro"
+    [ngClass]="{ 'is-invalid': submitted && hasError('bairro') }"
+  />
+
+  <label for="municipio">Municipio</label>
+  <input
+    type="text"
+    name="municipio"
+    id="municipio"
+    formControlName="municipio"
+    placeholder="Municipio"
+    [ngClass]="{ 'is-invalid': submitted && hasError('municipio') }"
+  />
+
+  <select name="select" [ngClass]="{ 'is-invalid': submitted && hasError('uf') }">UF
+    <option name="uf"  formControlName="uf" value="valor1" selected>SP</option>
+    <option name="uf"  formControlName="uf" value="valor2">RJ</option>
+  </select>
+
+  <select name="select" [ngClass]="{ 'is-invalid': submitted && hasError('tipo') }">Tipo
+    <option name="tipo" formControlName="tipo"  value="valor1" selected>Comercial</option>
+    <option name="tipo" formControlName="tipo"  value="valor2">Residencial</option>
+  </select>
+
+  <button type="submit" class="btn-enviar" (click)="onSubmit()">Enviar</button>
+  <button type="button" class="btn-cancelar" (click)="onCancel()">
+    Cancelar
+  </button>
+</form>

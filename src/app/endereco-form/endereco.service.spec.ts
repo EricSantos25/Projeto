@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { EnderecoService } from './endereco.service';
+import { EnderecoService } from '../service/endereco.service';
 
 describe('EnderecoServico', () => {
   beforeEach(() => {

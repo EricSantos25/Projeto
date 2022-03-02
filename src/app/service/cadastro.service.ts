@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Cadastro } from '../domain/cadastroClass';
 import { Observable } from 'rxjs';
-import { Cadastro } from './cadastroClass';
 
 
 @Injectable({
@@ -9,7 +9,7 @@ import { Cadastro } from './cadastroClass';
     })
 
     export class CadastroService {
-    URL = 'http://localhost:3000';
+    URL = 'http://localhost:3000/cadastro';
 
     constructor (private http: HttpClient) {}
 
@@ -18,6 +18,6 @@ import { Cadastro } from './cadastroClass';
     }
 
     adicionar(dados: Cadastro): Observable<any> {
-       return this.http.post(`${this.URL}/cadastro`, dados);
+       return this.http.post(`${this.URL}`, dados);
     }
 }

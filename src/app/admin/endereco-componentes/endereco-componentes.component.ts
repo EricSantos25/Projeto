@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EnderecoService } from '../endereco.service';
+import { EnderecoService } from '../../service/endereco.service';
 
 
 @Component({

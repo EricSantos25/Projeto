@@ -4,27 +4,39 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { EnderecoService } from './endereco/endereco.service';
+
+import { CadastroService } from './service/cadastro.service';
+import { EnderecoService } from './service/endereco.service';
+import { DocumentoService } from './service/documento.service';
+
 import { AdminComponentesComponent } from './admin/admin-componentes/admin-componentes.component';
-import { CadastroComponentesComponent } from './cadastro/cadastro-form/cadastro-form.component';
-import { EnderecoComponentesComponent } from './endereco/endereco-componentes/endereco-componentes.component';
-import { DocumentoComponentesComponent } from './documento/documento-componentes/documento-componentes.component';
+import { EnderecoComponentesComponent } from './admin/endereco-componentes/endereco-componentes.component';
+import { DocumentoComponentesComponent } from './admin/documento-componentes/documento-componentes.component';
+import { CadastroComponentesComponent } from './admin/cadastro-componentes/cadastro-componentes.component';
+import { CadastroFormComponent } from './cadastro-form/cadastro-form.component';
+import { EnderecoFormComponent } from './endereco-form/endereco-form.component';
+import { DocumentoFormComponent } from './documento-form/documento-form.component';
+import { routing } from './app.routing';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EnderecoComponentesComponent,
     AdminComponentesComponent,
-    DocumentoComponentesComponent,
     CadastroComponentesComponent,
+    EnderecoComponentesComponent,
+    DocumentoComponentesComponent,
+    CadastroFormComponent,
+    EnderecoFormComponent,
+    DocumentoFormComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    routing
   ],
-  providers: [EnderecoService],
+  providers: [EnderecoService, DocumentoService, CadastroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

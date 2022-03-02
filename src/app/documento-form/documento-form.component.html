@@ -1,0 +1,11 @@
+<form class="needs-validation" novalidate [formGroup]="form">
+
+
+<app-cadastro-form></app-cadastro-form>
+<app-documento-form></app-documento-form>
+<app-endereco-form></app-endereco-form>
+
+<button type="submit" class="btn-enviar" (click)="onSubmit()">Enviar</button>
+<button type="button" class="btn-cancelar" (click)="onCancel()">
+  Cancelar
+</button>

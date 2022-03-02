@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { CadastroService } from './cadastro.service';
+import { CadastroService } from '../service/cadastro.service';
 
 describe('CadastroService', () => {
   beforeEach(() => {

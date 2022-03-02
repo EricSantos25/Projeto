@@ -1,16 +1,91 @@
-<header>
-  <nav id="menu">
-    <ul>
-      <li><a href="http://localhost:3000/admin">Ver dados API</a></li>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Produtos</a></li>
-      <li><a href="#">Missão</a></li>
-      <li><a href="#">Links</a></li>
-      <li><a href="#">Contato</a></li>
-    </ul>
-  </nav>
-</header>
+  
+  <header>
+    <nav id="menu">
+      <ul>
+        <li><a href="http://localhost:3000/admin">Ver dados API</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Produtos</a></li>
+        <li><a href="#">Missão</a></li>
+        <li><a href="#">Links</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <table>
+      <caption>Cadastro</caption>
+      <tr>
+          <th scope="col">ID de Cadastro:</th>
+          <th scope="col">CPF:</th>
+          <th scope="col">Nome:</th>
+          <th scope="col">Sonrenome:</th>
+          <th scope="col">Razão Social:</th>
+          <th scope="col">Data De Nascimento/Fundação:</th>
+      </tr>
+      <tr *ngFor="let reg of registros">
+        <td>{{reg.idCad}}</td>
+        <td>{{reg.cpfCnpj}}</td>
+        <td>{{reg.nome}}</td>
+        <td>{{reg.sobreNome}}</td>
+        <td>{{reg.razaoSocial}}</td>
+        <td>{{reg.DtNascFund}}</td>
+      </tr>
+    </table>
+  </section>
 
-<app-cadastro-form></app-cadastro-form>
-<app-endereco-componentes></app-endereco-componentes>
-<app-documento-componentes></app-documento-componentes>
+  <section>
+  <table>
+    <caption>Documento</caption>
+    <tr>
+        <th scope="col">ID de Documento:</th>
+        <th scope="col">ID de Cadastro:</th>
+        <th scope="col">Tipo:</th>
+        <th scope="col">Número:</th>
+        <th scope="col">Digito:</th>
+        <th scope="col">Data de Expedição:</th>
+        <th scope="col">Data de Validade:</th>
+        <th scope="col">Emissor:</th>
+    </tr>
+    <tr *ngFor="let reg of registros">
+      <td>{{reg.idDoc}}</td>
+      <td>{{reg.idCad}}</td>
+      <td>{{reg.tipo}}</td>
+      <td>{{reg.numero}}</td>
+      <td>{{reg.digito}}</td>
+      <td>{{reg.dtExp}}</td>
+      <td>{{reg.dtValidade}}</td>
+      <td>{{reg.emissor}}</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <table>
+    <caption>Endereço</caption>
+    <tr>
+        <th scope="col">ID de Endereco:</th>
+        <th scope="col">ID de Cadastro:</th>
+        <th scope="col">CEP:</th>
+        <th scope="col">Logradouro:</th>
+        <th scope="col">Número:</th>
+        <th scope="col">Complemento:</th>
+        <th scope="col">Bairro:</th>
+        <th scope="col">Municipio:</th>
+        <th scope="col">UF:</th>
+        <th scope="col">Tipo:</th>
+    </tr>
+    <tr *ngFor="let reg of registros">
+      <td>{{reg.idEnd}}</td>
+      <td>{{reg.idCad}}</td>
+      <td>{{reg.cep}}</td>
+      <td>{{reg.logradouro}}</td>
+      <td>{{reg.numero}}</td>
+      <td>{{reg.complemento}}</td>
+      <td>{{reg.bairro}}</td>
+      <td>{{reg.municipio}}</td>
+      <td>{{reg.uf}}</td>
+      <td>{{reg.tipo}}</td>
+    </tr>
+  </table>
+</section>
+
