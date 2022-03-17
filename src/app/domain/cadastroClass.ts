@@ -1,11 +1,33 @@
 export class Cadastro {
-    
-    constructor(
-        _idCad: number,
-        _cpfCnpj: number,
-        _nome: string,
-        _sobreNome: string,
-        _razaoSocial: string,
-        _DtNascFund: Date
-    ) {  }
+
+    public idCad: any
+
+    public cpfCnpj: number
+
+    public nome: string
+
+    public sobreNome: string
+
+    public razaoSocial: string
+
+    public DtNascFund: Date
+
+
+
+    constructor( dadosCadastro: any) {
+
+      this.idCad = dadosCadastro.idCad
+
+      this.cpfCnpj = dadosCadastro.cpfCnpj
+
+      this.nome = dadosCadastro.nome
+
+      this.sobreNome = dadosCadastro.sobreNome
+
+      this.razaoSocial = dadosCadastro.razaoSocial
+
+      this.DtNascFund = dadosCadastro.DtNascFund
+
+     }
+
 }

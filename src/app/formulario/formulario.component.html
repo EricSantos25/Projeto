@@ -1,0 +1,242 @@
+<div>
+  <form class="needs-validation" novalidate [formGroup]="formCad">
+    <div>
+      <label for="cpfCnpj">CpfCnpj:
+        <input 
+            type="number"
+            name="cpfCnpj"
+            id="cpfCnpj"
+            formControlName="cpfCnpj"
+            placeholder="cpf/Cnpj"
+            class="validate"
+
+        />
+      </label>
+
+      <label for="senha">Senha:
+        <input
+          type="password"
+          name="senha"
+          id="senha"
+          formControlName="senha"
+          placeholder="senha"
+          class="validate"
+
+        />
+      </label>
+
+    <div>
+      <label for="nome">Nome:
+        <input
+          type="text"
+          name="nome"
+          id="nome"
+          formControlName="nome"
+          placeholder="Nome"
+          class="validate"
+
+        />
+      </label>
+
+      <label for="sobrenome">Sobrenome:
+        <input
+          type="text"
+          name="sobrenome"
+          id="sobrenome"
+          formControlName="sobreNome"
+          placeholder="Sobrenome"
+          class="validate"
+
+        />
+      </label>
+    </div>
+
+      <label for="razaoSocial">RazaoSocial:
+        <input
+          type="text"
+          name="razaoSocial"
+          id="razaoSocial"
+          formControlName="razaoSocial"
+          placeholder="razão social"
+          class="validate"
+
+        />
+      </label>
+
+      <label for="dtNascFund">Data de Fundação:
+        <input
+          type="date"
+          name="dtNascFund"
+          id="dtNascFund"
+          formControlName="dtNascFund"
+          placeholder="Data de Fundação"
+          class="validate"
+
+        />
+      </label>
+    </div>
+
+    <div class="needs-validation" novalidate [formGroup]="formDoc">
+      <label for="tipo">Tipo:
+        <input
+          type="text"
+          name="tipo"
+          id="tipo"
+          formControlName="tipo"
+          placeholder="tipo"
+          class="validate"
+
+        />
+      </label>
+
+      <label for="numero">Número:
+        <input
+          type="number"
+          name="numero"
+          id="numero"
+          formControlName="numero"
+          placeholder="Numero"
+          class="validate"
+
+        />
+      </label>
+
+      <label for="digito">Digito:
+        <input
+          type="number"
+          name="digito"
+          id="digito"
+          formControlName="digito"
+          placeholder="digito"
+          class="validate"
+          
+        />
+      </label>
+
+      <label for="dtExp">Data de Expedição:
+        <input
+          type="date"
+          name="dtExp"
+          id="dtExp"
+          formControlName="dtExp"
+          placeholder="dtExp"
+          class="validate"
+
+        />
+      </label>
+
+      <label for="dtValidade">Data de Validade:
+        <input
+          type="date"
+          name="dtValidade"
+          id="dtValidade"
+          formControlName="dtValidade"
+          placeholder="dtValidade"
+          class="validate"
+
+        />
+      </label>
+
+      <label for="emissor">Emissor:
+        <input
+          type="text"
+          name="emissor"
+          id="emissor"
+          formControlName="emissor"
+          placeholder="Emissor"
+          class="validate"
+
+        />
+      </label>
+    </div>
+
+    <div class="needs-validation" novalidate [formGroup]="formEnd">
+      <label for="cep">CEP:
+        <input
+          type="number"
+          name="cep"
+          id="cep"
+          formControlName="cep"
+          placeholder="cep"
+          class="validate"
+
+        />
+      </label>
+
+      <label for="logradouro">Logradouro:
+      <input
+        type="text"
+        name="logradouro"
+        id="logradouro"
+        formControlName="logradouro"
+        placeholder="logradouro"
+        class="validate"
+
+      />
+      </label>
+
+      <label for="numero">Número:
+        <input
+          type="number"
+          name="numero"
+          id="numero"
+          formControlName="numero"
+          placeholder="Número"
+          class="validate"
+
+        />
+      </label>
+
+      <label for="complemento">Complemento:
+        <input
+          type="text"
+          name="complemento"
+          id="complemento"
+          formControlName="complemento"
+          placeholder="Complemento"
+          class="validate"
+
+        />
+      </label>
+
+      <label for="bairro">Bairro:
+        <input
+          type="text"
+          name="bairro"
+          id="bairro"
+          formControlName="bairro"
+          placeholder="Bairro"
+          class="validate"
+          
+        />
+      </label>
+    
+      <label for="municipio">Municipio
+        <input
+          type="text"
+          name="municipio"
+          id="municipio"
+          formControlName="municipio"
+          placeholder="Municipio"
+          class="validate"
+
+        />
+      </label>
+
+      <select name="select"  formControlName="uf" class="validate">UF
+        <option name="uf"  value="valor1" selected>SP</option>
+        <option name="uf" value="valor2">RJ</option>
+      </select>
+
+      <select name="select" formControlName="tipo" class="validate">Tipo
+        <option name="tipo" value="valor1" selected>Comercial</option>
+        <option name="tipo" value="valor2">Residencial</option>
+      </select>
+      </div> 
+    </form>
+    <button type="submit" class="btn-enviar" (click)="onSubmit()">Enviar</button>
+    <button type="button" class="btn btn-link" [routerLink]="['/login']">Fazer login</button>
+  </div>
+
+
+   
